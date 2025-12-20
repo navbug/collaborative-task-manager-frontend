@@ -52,6 +52,7 @@ export const Login: React.FC = () => {
         )}
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+          <p className='text-sm'>Demo: Email - navbug@gmail.com Password - passcode</p>
           <Input
             label="Email"
             type="email"

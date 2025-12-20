@@ -1,6 +1,4 @@
-// src/components/ui/Select.tsx
-
-import React, { forwardRef, SelectHTMLAttributes } from 'react';
+import { forwardRef, SelectHTMLAttributes } from 'react';
 import { clsx } from 'clsx';
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {

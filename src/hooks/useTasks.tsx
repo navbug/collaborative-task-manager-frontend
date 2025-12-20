@@ -18,21 +18,21 @@ export const useTasks = (filters?: TaskFilters) => {
   useEffect(() => {
     if (!socket) return;
 
-    const handleTaskCreated = (task: any) => {
+    const handleTaskCreated = () => {
       queryClient.invalidateQueries({ queryKey: ['tasks'] });
       queryClient.invalidateQueries({ queryKey: ['tasks', 'created'] });
       queryClient.invalidateQueries({ queryKey: ['tasks', 'assigned'] });
       queryClient.invalidateQueries({ queryKey: ['tasks', 'overdue'] });
     };
 
-    const handleTaskUpdated = (task: any) => {
+    const handleTaskUpdated = () => {
       queryClient.invalidateQueries({ queryKey: ['tasks'] });
       queryClient.invalidateQueries({ queryKey: ['tasks', 'created'] });
       queryClient.invalidateQueries({ queryKey: ['tasks', 'assigned'] });
       queryClient.invalidateQueries({ queryKey: ['tasks', 'overdue'] });
     };
 
-    const handleTaskDeleted = (data: any) => {
+    const handleTaskDeleted = () => {
       queryClient.invalidateQueries({ queryKey: ['tasks'] });
       queryClient.invalidateQueries({ queryKey: ['tasks', 'created'] });
       queryClient.invalidateQueries({ queryKey: ['tasks', 'assigned'] });

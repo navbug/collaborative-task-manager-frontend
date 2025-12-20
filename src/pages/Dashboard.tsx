@@ -9,7 +9,7 @@ import { useQueryClient } from '@tanstack/react-query';
 export const Dashboard: React.FC = () => {
   const { data: createdTasks, isLoading: createdLoading, refetch: refetchCreated } = useCreatedTasks();
   const { data: assignedTasks, isLoading: assignedLoading, refetch: refetchAssigned } = useAssignedTasks();
-  const { data: overdueTasks, isLoading: overdueLoading, refetch: refetchOverdue } = useOverdueTasks();
+  const { data: overdueTasks, refetch: refetchOverdue } = useOverdueTasks();
   const { socket } = useSocket();
   const queryClient = useQueryClient();
 
